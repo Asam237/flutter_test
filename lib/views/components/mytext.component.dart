@@ -18,9 +18,32 @@ class _CTextState extends State<CText> {
     if (widget.textType == "title") {
       return Text(
         widget.content.toString(),
+        textAlign: TextAlign.center,
         style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.w700,
+            fontSize: 24,
+            fontFamily: 'Neuehaas',
+            fontWeight: FontWeight.w800,
+            color: Color(widget.textColor!.toInt())),
+      );
+    }
+    if (widget.textType == "small") {
+      return Text(
+        widget.content.toString(),
+        style: TextStyle(
+            fontSize: 12,
+            fontFamily: 'Neuehaas',
+            fontWeight: FontWeight.w500,
+            color: Color(widget.textColor!.toInt())),
+      );
+    }
+    if (widget.textType == "titlelight") {
+      return Text(
+        widget.content.toString(),
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            fontSize: 24,
+            fontFamily: 'Neuehaas',
+            fontWeight: FontWeight.w500,
             color: Color(widget.textColor!.toInt())),
       );
     }
@@ -30,6 +53,7 @@ class _CTextState extends State<CText> {
         style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w500,
+            fontFamily: 'Neuehaas',
             color: Color(widget.textColor!.toInt())),
       );
     }
@@ -38,6 +62,7 @@ class _CTextState extends State<CText> {
       style: TextStyle(
           fontSize: 13,
           fontWeight: FontWeight.w500,
+          fontFamily: 'Neuehaas',
           color: Color(widget.textColor!.toInt())),
     );
   }
