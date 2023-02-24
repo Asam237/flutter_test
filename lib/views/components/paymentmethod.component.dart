@@ -4,6 +4,7 @@ import 'package:ejara_flutter_test/commons/size.dart';
 import 'package:ejara_flutter_test/views/components/button.component.dart';
 import 'package:ejara_flutter_test/views/components/menucb.component.dart';
 import 'package:ejara_flutter_test/views/components/mytext.component.dart';
+import 'package:ejara_flutter_test/views/screens/addpayment.screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -42,7 +43,10 @@ PaymentMethod(BuildContext context) {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width,
                 height: 1,
                 color: Color(Palette.separate),
               ),
@@ -83,6 +87,9 @@ PaymentMethod(BuildContext context) {
                   typebtn: "primary",
                   mycolor: Palette.blueAccent,
                   myicon: Icons.add,
+                  onTap: () {
+                    Nav.push(context, AddPaymentScreen());
+                  },
                 ),
               ),
               Container(
