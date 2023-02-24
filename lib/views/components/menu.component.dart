@@ -22,13 +22,13 @@ class _CMenuState extends State<CMenu> {
     return InkWell(
       onTap: widget.onTap,
       child: ListTile(
+        minVerticalPadding: 1.0,
         leading: Container(
           width: Sizes.medium,
           height: Sizes.medium,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(100),
-            color: Color(Palette.indigo)
-          ),
+              borderRadius: BorderRadius.circular(100),
+              color: Color(Palette.indigo)),
           child: Icon(widget.icon, color: Color(Palette.blue)),
         ),
         title: CText(
