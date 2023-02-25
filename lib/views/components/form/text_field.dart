@@ -47,10 +47,11 @@ class CTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: CText(
-        content: title!,
+        content: title,
         textColor: Palette.grey,
       ),
       subtitle: Container(
+        height: Sizes.xlarge,
         decoration: BoxDecoration(
           border: Border.all(color: Color(Palette.grey), width: 1),
           borderRadius: BorderRadius.circular(Sizes.small),

@@ -1,9 +1,7 @@
-import 'package:ejara_flutter_test/commons/form/dropdown.dart';
-import 'package:ejara_flutter_test/commons/form/labeled/dropdown.dart';
-import 'package:ejara_flutter_test/commons/form/labeled/text_field.dart';
-import 'package:ejara_flutter_test/commons/form/text_field.dart';
 import 'package:ejara_flutter_test/commons/palettes.dart';
 import 'package:ejara_flutter_test/commons/size.dart';
+import 'package:ejara_flutter_test/views/components/form/dropdown.dart';
+import 'package:ejara_flutter_test/views/components/form/text_field.dart';
 import 'package:ejara_flutter_test/views/components/mytext.component.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +29,7 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
       backgroundColor: Color(Palette.bg),
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(Sizes.small),
-        height: 50.0,
+        height: Sizes.xlarge,
         child: CButton(
           text: "Continue",
           mycolor: Palette.primary,

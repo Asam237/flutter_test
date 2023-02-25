@@ -4,49 +4,39 @@ import 'package:ejara_flutter_test/api/response.api.dart';
 import 'package:http/http.dart' as http;
 
 class ServicesApi {
-  final String _baseUrl = 'https://api-dev.itrade.digital/';
-  final String _apiKey = 'K[bb@c*heYNTOd[UVBmLevq0(';
-  final String _clientID = '02d5f007e2';
-  final String _appVersion = '3.1.5';
-  final String _appPlateform = 'android-test';
-  final String _client = 'mobile';
-  final String _acceptLanguage = 'en';
+  final String _baseUrl = 'https://testbox-nellys-coin.ejaraapis.xyz/api/v1/';
 
   login(data, apiUrl) async {
     var fulUrl = Uri.parse(_baseUrl + apiUrl);
-    return await http
-        .post(
-      fulUrl,
-      body: jsonEncode(data),
-      headers: _setHeaders(),
-    )
-        .then((data) async {
+    return await http.post(fulUrl, body: jsonEncode(data), headers: {
+      'Content-type': 'application/json',
+      'Accept': 'application/json',
+      'api-key': 'K[bb@c*heYNTOd[UVBmLevq0(',
+      'client-id': '02d5f007e2',
+    }).then((data) async {
+      print(data.body);
       if (data.statusCode == 200) {
         final jsonData = jsonDecode(data.body);
         var datas = jsonData;
         return ResponseApi<Map<String, dynamic>>(data: datas);
-      } else if (data.statusCode == 204) {
+      } else if (data.statusCode == 400) {
         return ResponseApi<Map<String, dynamic>>(
-            error: true, errorMessage: "Email ou mot de passe incorrect");
+            error: true, errorMessage: "Incorrect email or password");
       }
       return ResponseApi<Map<String, dynamic>>(
-          error: true, errorMessage: "Une erreur est survenue. REESAYER");
+          error: true, errorMessage: "An error has occured.");
     }).catchError((error) {
       log(error.toString());
       return ResponseApi<Map<String, dynamic>>(
           error: true,
-          errorMessage: "Une erreur est survenue ${error.toString()}");
+          errorMessage: "An error has occured ${error.toString()}");
     });
   }
 
   _setHeaders() => {
         'Content-type': 'application/json',
         'Accept': 'application/json',
-        'api-key': {_apiKey},
-        'client-id': {_clientID},
-        'app-version': {_appVersion},
-        'app-platform': {_appPlateform},
-        'client': {_client},
-        'Accept-language': {_acceptLanguage}
+        'api-key': 'K[bb@c*heYNTOd[UVBmLevq0(',
+        'client-id': '02d5f007e2',
       };
 }

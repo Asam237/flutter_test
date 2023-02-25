@@ -1,4 +1,5 @@
 import 'package:ejara_flutter_test/views/screens/home.screen.dart';
+import 'package:ejara_flutter_test/views/screens/login.screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen()
+      home: const LoginScreen()
     );
   }
 }
