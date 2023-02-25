@@ -1,6 +1,7 @@
 import 'package:ejara_flutter_test/commons/helpers.dart';
 import 'package:ejara_flutter_test/commons/palettes.dart';
 import 'package:ejara_flutter_test/commons/size.dart';
+import 'package:ejara_flutter_test/langs/en.lang.dart';
 import 'package:ejara_flutter_test/views/components/menu.component.dart';
 import 'package:ejara_flutter_test/views/components/mytext.component.dart';
 import 'package:ejara_flutter_test/views/components/paymentmethod.component.dart';
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   margin: EdgeInsets.symmetric(horizontal: Sizes.xlarge),
                   alignment: Alignment.center,
                   child: CText(
-                    content: "Choose a payment method",
+                    content: homeLang[0]["choose_payment"],
                     textType: "title",
                     textColor: Palette.primary,
                   )),
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       SizedBox(height: Sizes.xsmall),
                       CText(
-                        content: "Ejara Flex",
+                        content: homeLang[1]["name"],
                         textColor: Palette.grey,
                       ),
                       SizedBox(height: Sizes.small),
@@ -77,12 +78,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CText(
-                            content: "20,000",
+                            content: homeLang[2]["amount"],
                             textColor: Palette.primary,
                             textType: "title",
                           ),
                           CText(
-                            content: "FCFA",
+                            content: homeLang[3]["devise"],
                             textColor: Palette.grey,
                             textType: "titlelight",
                           ),
@@ -97,24 +98,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       ListTile(
                         leading: CText(
                           textColor: Palette.grey,
-                          content: "Earnings per day",
+                          content: homeLang[4]["earning"],
                         ),
                         trailing: CText(
                           textColor: Palette.blueAccent,
-                          content: "10,000 FCFA",
+                          content: homeLang[5]["earning_amount"],
                         ),
                       )
                     ],
                   )),
               SizedBox(height: Sizes.small),
               CText(
-                content: "Select a payment methods",
+                content: homeLang[6]["select_payment"],
                 textColor: Palette.primary,
                 textType: "subTitle",
               ),
               SizedBox(height: Sizes.xsmall),
               CMenu(
-                title: "Cash payment",
+                title: homeLang[7]["cash"],
                 subTitle: "Fees: Offer",
                 icon: Icons.money,
                 onTap: () {
