@@ -1,4 +1,4 @@
-# ejara_flutter_test
+# Ejara Flutter Test
 
 Ejara Flutter project test.
 
@@ -111,3 +111,9 @@ views/
   |- home.screen.dart
   |- login.screen.dart
 ```
+
+### Demo
+
+
+https://user-images.githubusercontent.com/34966088/221414194-ad86a679-05e3-41bb-ac82-8b15308c5198.mp4
+
