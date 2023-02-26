@@ -2,15 +2,112 @@
 
 Ejara Flutter project test.
 
-## Getting Started
+## How to Use
 
-This project is a starting point for a Flutter application.
+**Step 1:**
 
-A few resources to get you started if this is your first Flutter project:
+Download or clone this repo by using the link below:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+https://github.com/Asam237/flutter_test
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Step 2:**
+
+Go to project root and execute the following command in console to get the required dependencies:
+
+```
+flutter pub get 
+```
+
+## Boilerplate Features:
+
+* Login
+* Home
+* Add Payment
+* Http
+
+### Libraries & Tools Used
+
+* [Http](https://pub.dev/packages/http)
+* [Flutter Toast](https://pub.dev/packages/fluttertoast)
+
+### Folder Structure
+Here is the core folder structure which flutter provides.
+
+```
+flutter-app/
+|- android
+|- build
+|- ios
+|- lib
+|- test
+```
+
+Here is the folder structure we have been using in this project
+
+```
+lib/
+|- api/
+|- commons/
+|- langs/
+|- views/
+|- main.dart
+```
+
+Now, lets dive into the lib folder which has the main code for the application.
+
+```
+1- api - The api folder allows us to interoperate and consume elements coming from the backend.
+2- commons - Contains all the elements common to the application, such as colors, size etc. 
+3- langs - Contains all the hard texts of the application.
+3- views - contains everything that is visual (screen and component). 
+8- main.dart - This is the starting point of the application. 
+```
+
+### API
+
+
+```
+api/
+|- response.api.dart
+|- servicese.api.dart
+```
+
+### Commons
+
+
+```
+commons/
+|- helpers.dart
+|- palettes.dart
+|- size.dart
+```
+
+### Langs
+
+
+```
+langs/
+|- en.lang.dart
+```
+
+### Views
+
+```
+views/
+|- components/
+   |- form/
+      | - dropdown.dart
+      | - pass_field.dart
+      | - text_field.dart
+   | - button.component.dart
+   | - menu.component.dart
+   | - nenucb.component.dart
+   | - mytext.component.dart
+   | - paymentmethod.component.dart
+|- screens/
+  |- addpayment.screen.dart
+  |- home.screen.dart
+  |- login.screen.dart
+```

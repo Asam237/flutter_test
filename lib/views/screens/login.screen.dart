@@ -41,12 +41,16 @@ class _LoginScreenState extends State<LoginScreen> {
       };
 
       _apiResponse = await ServicesApi().login(data, 'auth/login');
-
       if (_apiResponse!.error == false) {
         SharedPreferences localStorage = await SharedPreferences.getInstance();
         localStorage.setString('isConnected', "true");
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => HomeScreen(
+                      name: _apiResponse!.data!["data"]!["username"],
+                      token: _apiResponse!.data!["token"]!,
+                    )));
         setState(() {
           _loading = false;
         });

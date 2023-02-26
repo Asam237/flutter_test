@@ -9,7 +9,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  final String? name;
+  final String? token;
+
+  const HomeScreen(
+      {this.name,
+      this.token,
+      Key? key})
+      : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -70,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       SizedBox(height: Sizes.xsmall),
                       CText(
-                        content: homeLang[1]["name"],
+                        content: widget.name,
                         textColor: Palette.grey,
                       ),
                       SizedBox(height: Sizes.small),

@@ -14,7 +14,6 @@ class ServicesApi {
       'api-key': 'K[bb@c*heYNTOd[UVBmLevq0(',
       'client-id': '02d5f007e2',
     }).then((data) async {
-      print(data.body);
       if (data.statusCode == 200) {
         final jsonData = jsonDecode(data.body);
         var datas = jsonData;
