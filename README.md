@@ -111,6 +111,12 @@ views/
   |- home.screen.dart
   |- login.screen.dart
 ```
+### Difficulty
+I could not execute the second test request due to some errors.
+See captures below.
+
+![Screenshot from 2023-02-25 19-09-51](https://user-images.githubusercontent.com/34966088/221414488-5d090d85-f627-493d-b18c-b34d20562b0e.png)
+
 
 ### Demo
 
